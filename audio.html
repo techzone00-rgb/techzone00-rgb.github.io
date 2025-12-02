@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Аудио</title>
+    <link rel="icon" href="icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "nav nav"
+                "content sidebar"
+                "footer footer";
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        
+        header {
+            grid-area: header;
+            background: #6a11cb;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 1;
+        }
+        
+        nav {
+            grid-area: nav;
+            background-color: #333;
+            padding: 0rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+        }
+        
+        nav a:hover {
+            background-color: #555;
+        }
+        
+        .content {
+            grid-area: content;
+            padding: 2rem;
+        }
+        
+        .content h2 {
+            color: #2575fc;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        
+        .content p {
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #f0f0f0;
+            padding: 2rem 1rem;
+            border-left: 1px solid #ddd;
+        }
+        
+        .sidebar h3 {
+            color: #2575fc;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar li {
+            margin-bottom: 0.3rem;
+        }
+        
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Аудиоплеер</h1>
+            <p>На этой странице находятся аудиофайлы.</p>
+        </header>
+
+        <nav>
+            <ul>
+                <ul><a href="index.html">Главная</a></ul>
+                <ul><a href="gallery.html">Галерея</a></ul>
+                <ul><a href="audio.html">Аудио</a></ul>
+                <ul><a href="video.html">Видео</a></ul>
+            </ul>
+        </nav>
+
+        <main class="media-container">
+            <h3>Звуковой файл</h3>
+            <audio controls>
+                <source src="audio/audio1.mp3" type="audio/mpeg">
+            </audio>
+            <p>Смешной смех</p>
+        </main>
+
+        <aside class="sidebar">
+            <h3>Другие страницы</h3>
+            <ul>
+                <li><a href="index.html">Главная страница</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="video.html">Видео страница</a></li>
+            </ul>
+            
+            <h3>О Аудиоплеере</h3>
+            <p>Лучшая музыка отобрана специально для вас.</p>
+        </aside>
+        
+        <footer>
+            <p>2025, Москва что-то там</p>
+            <p>Данная страница была написана мной</p>
+        </footer>
+    </div>
+</body>
+</html>
